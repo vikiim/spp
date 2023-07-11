@@ -1,0 +1,22 @@
+<?php 
+require '../function/functions.php';
+$id = $_GET["id_spp"];
+
+if (hapus_spp($id) > 0 ) {
+	# code...
+	echo "
+		<script>
+		alert('Data berhasil di Hapus !');
+		document.location.href = 'spp.php';
+		</script>
+		";
+} else {
+	echo "
+		<script>
+		alert('Data gagal di Hapus !');
+		document.location.href = 'spp.php';
+		</script>
+		";
+
+ }
+?>
